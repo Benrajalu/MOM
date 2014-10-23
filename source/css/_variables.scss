@@ -1,0 +1,10 @@
+// Box sizing, dammit
+	*{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+// Colors
+	$white: #fff;
+	$black: #2f2f2f;

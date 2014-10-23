@@ -1,0 +1,12 @@
+.rowFluid{
+	width:100%;
+	min-width:1000px;
+	@include clearfix();
+}
+
+.row{
+	width:1000px;
+	margin:0 auto;
+	@include clearfix();
+	position:relative;
+}
