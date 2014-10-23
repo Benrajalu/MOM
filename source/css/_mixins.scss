@@ -28,3 +28,15 @@
 	font-size:$size;
 	color:$color;
 }
+
+@mixin medium($size, $color){
+	font-family:'medium', sans-serif;
+	font-size:$size;
+	color:$color;
+}
+
+@mixin regular($size, $color){
+	font-family:'regular', sans-serif;
+	font-size:$size;
+	color:$color;
+}
