@@ -22,7 +22,8 @@ window.ParsleyValidator.setLocale('fr');
 
 jQuery(window).load(function () {
 	  jQuery("#mainSlider").flexslider({
-        controlNav : true, 
+        controlNav : false,
+        slideshowSpeed:5000, 
         animation : 'slide',
         manualControls : '#sliderNav li'
     });

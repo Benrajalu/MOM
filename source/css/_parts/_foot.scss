@@ -1,0 +1,27 @@
+// Footer styles
+	#footer{
+		display:block;
+		text-align:center;
+		border-top:1px dotted #918b8b;
+		border-bottom:1px dotted #918b8b;
+		height:27px;
+		line-height:27px;
+		position:relative;
+		z-index:3;
+		li{
+			@include inline-block();
+			@include regular(10.6px, #767675);
+			a{
+				@include regular(10.6px, #767675);
+				text-decoration:none;
+				@include transition(all 200ms);
+				&:hover{
+					color:$greenText;
+				}
+				&:after{
+					content:"/";
+					padding:0 10px;
+				}
+			}
+		}
+	}

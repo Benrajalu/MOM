@@ -2,5 +2,59 @@
 title: Home
 description: Home
 ---
-			
-			
+
+
+		<div class="line">
+			<div id="homeSlider">
+				<div class="flexslider" id="mainSlider">
+					<ul class="slides">
+						<li><% link_to "#" do %><%= image_tag "slides/slide1.jpg", :alt=>"Slide image" %><% end %></li>
+						<li><% link_to "#" do %><%= image_tag "slides/slide2.jpg", :alt=>"Slide image" %><% end %></li>
+					</ul>
+				</div>
+			</div>
+			<aside id="services">
+				<h2>Besoin <br/>d'un service, <br/>une question ?</h2>
+				<ul class="servicesList">
+					<li class="commercial"><%= link_to "<span class='icon'></span><span class='text'>Service <br/>commercial</span>", "#" %></li>
+					<li class="produit"><%= link_to "<span class='icon'></span><span class='text'>Information <br/>produit</span>", "#" %></li>
+					<li class="recrutement"><%= link_to "<span class='icon'></span><span class='text'>Recrutement</span>", "#" %></li>
+					<li class="industrie"><%= link_to "<span class='icon'></span><span class='text'>Pôle <br/>industriel</span>", "#" %></li>
+				</ul>
+			</aside>
+		</div>
+
+		<div class="line">
+			<article class="box quarter">
+				<h3><%= link_to "Mont-blanc", "#" %></h3>
+				<section class="content">
+					<p>Esta lorem dabast froi in the davec car. Esta lorem dabast los es. None estyde froi in the davec car.</p>
+					<%= link_to "+ d'info", "#" %>
+				</section>
+				<%= image_tag "mont-blanc.png", :alt=>"Mont-Blanc" %>
+			</article>
+			<article class="box quarter materne">
+				<h3><%= link_to "Materne", "#" %></h3>
+				<section class="content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum pariatur debitis, aliquam impedit labore.</p>
+					<%= link_to "+ d'info", "#" %>
+				</section>
+				<%= image_tag "materne.png", :alt=>"Materne" %>
+			</article>
+			<article class="box quarter gloria">
+				<h3><%= link_to "Gloria", "#" %></h3>
+				<section class="content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit adipisci molestias, sunt nisi in  autem.</p>
+					<%= link_to "+ d'info", "#" %>
+				</section>
+				<%= image_tag "gloria.png", :alt=>"gloria" %>
+			</article>
+			<article class="box quarter newsletter">
+				<h3><%= link_to "Newsletter", "#" %></h3>
+				<section class="content">
+					<p>Inscrivez-vous et profitez de nos offres !</p>
+					<%= link_to "+ d'info", "#" %>
+				</section>
+				<% link_to "#newsletter" do %><%= image_tag "newsletter.png", :alt=>"newsletter" %><% end %>
+			</article>
+		</div>

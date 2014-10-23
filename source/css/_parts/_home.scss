@@ -1,0 +1,174 @@
+// Styles used by the homepage
+	.line{
+		#homeSlider{
+			width:731px; 
+			padding-right:5px;
+			float:left;
+			height:326px;
+			.flexslider{
+				.flex-prev, .flex-next{
+					width:40px;
+					height:92px;
+					margin-top:-46px;
+				}
+				.flex-prev{
+					background:url("../img/slides/leftArrow.png") center center no-repeat;
+					left:0px;
+				}
+				.flex-next{
+					background:url("../img/slides/rightArrow.png") center center no-repeat;
+					right:0px;
+				}
+			}
+		}
+		#services{
+			float:right;
+			width:244px;
+			border-left:1px dotted #918b8b;
+			height:326px;
+			padding:20px;
+			h2{
+				@include regular(22.7px, $greenText);
+				line-height:1.1;
+				margin-bottom:30px;
+				&:before{
+					content:">";
+					position:relative;
+					top:-2px;
+					padding-right:5px;
+				}
+			}
+		}
+
+		.box{
+			float:left;
+			padding:20px;
+			position:relative;
+			> img{
+				position:absolute;
+				left:0px;
+				bottom:10px;
+				max-width:100%;
+				z-index:1;
+			}
+			> h3{
+				a{
+					text-decoration:none;
+					@include regular(22px, $greenText);
+					&:before{
+						content:">";
+						position:relative;
+						top:-2px;
+						padding-right:5px;
+					}
+				}
+			}
+			.content{
+				padding:20px 0px 10px 110px;
+				position:relative;
+				z-index:2;
+				p, a{
+					@include regular(11px, #6a6a6a);
+					@include transition(all 300ms);
+				}
+				p{
+					margin-bottom:5px;
+				}
+				a{
+					&:hover{
+						color:$greenText;
+					}
+				}
+			}
+			&.quarter{
+				width: (976px / 4);
+				border-left:1px dotted #918b8b;
+				border-top:1px dotted #918b8b;
+				height:252px;
+				&:first-child{
+					border-left:0px;
+				}
+			}
+			&.materne{
+				> img{
+					bottom:-20px;
+				}
+			}
+			&.gloria{
+				> img{
+					bottom:-35px;
+				}
+			}
+			&.newsletter{
+				.content{
+					padding:20px 40px 10px 10px;
+				}
+				> a{
+					position:absolute;
+					bottom:-44px;
+					left:46px;
+				}
+			}
+		}
+	}
+
+
+	.servicesList{
+		li{
+			margin-bottom:15px;
+			a{
+				display:block;
+				color:#6c6c6c;
+				text-decoration: none;
+				@include transition(all 200ms);
+				span{
+					@include inline-block();
+					vertical-align: middle;
+					&.icon{
+						position:relative;
+					}
+					&.text{
+						@include regular(15.4px, #6c6c6c);
+						padding-left:10px;
+					}
+				}
+				&:hover{
+					span.text{
+						color:$greenText;
+					}
+					span.icon{
+						opacity:0.7;
+					}
+				}
+			}
+			&.commercial{
+				span.icon{
+					width:28px;
+					height:35px;
+					background:url("../img/service-commercial.png") center center no-repeat;
+				}
+			}
+			&.produit{
+				span.icon{
+					width:31px;
+					height:30px;
+					background:url("../img/service-produit.png") center center no-repeat;
+				}
+			}
+			&.recrutement{
+				span.icon{
+					width:33px;
+					height:30px;
+					background:url("../img/service-recrutement.png") center center no-repeat;
+				}
+			}
+			&.industrie{
+				span.icon{
+					top:-3px;
+					width:36px;
+					height:37px;
+					background:url("../img/service-indus.png") center center no-repeat;
+				}
+			}
+		}
+	}
