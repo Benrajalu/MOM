@@ -17,6 +17,8 @@ if (!(window.console && console.log)) {
     }());
 }
 
+window.ParsleyValidator.setLocale('fr');
+
 
 jQuery(window).load(function () {
 	  jQuery("#mainSlider").flexslider({

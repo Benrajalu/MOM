@@ -91,6 +91,7 @@
 					display:none;
 					min-width:100%;
 					position:absolute;
+					z-index:999;
 					top:26px;
 					background:$lightGreen url('../img/flyoutUp.png') top center no-repeat;
 					overflow: hidden;

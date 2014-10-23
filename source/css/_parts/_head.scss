@@ -1,0 +1,148 @@
+// Header styles
+	#head{
+		height:123px;
+		display:block;
+		background:url("../img/header.png") top center no-repeat;
+		position:relative;
+		> form{
+			position:absolute;
+			right:20px;
+			top:0px;
+			min-height:100%;
+			padding:5px 0px 12px 0px;
+			width:204px;
+			> p{
+				font-family: Helvetica, arial, sans-serif;
+				font-size:15px;
+				color:#373c41;
+				letter-spacing:1.5px;
+				text-align: center;
+				line-height:18px;
+				strong{
+					display:block;
+					text-align: center;
+					font-weight:bold;
+				}
+			}
+
+			> h2{
+				@include regular(22.7px, $greenText);
+				position:relative;
+				padding-left:10px;
+				margin-bottom:5px;
+				&:before{
+					@include PE();
+					position:absolute;
+					content:">";
+					left:-6px;
+					top:-1px;
+				}
+			}
+
+			.inline{
+				@include clearfix();
+				&.fields{
+					text-align: justify;
+					margin-bottom:3px;
+					position:relative;
+					> div{
+						float:left;
+						width:95px;
+						position:relative;
+						&.right{
+							margin-left:5px;
+						}
+					}
+					input{
+						background:#fff;
+						border:2px solid $green;
+						border-radius:99px;
+						width:100%;
+						height:21px;
+						@include medium(10px, #6c6c6c);
+						padding:0 4px;
+						&:active, &:focus{
+							outline:0;
+						}
+						&.parsley-error, &.error{
+							border:2px solid $error;
+						}
+						&[type="submit"]{
+							width:22px;
+							height:22px;
+							background:$green;
+							color:#fff;
+							text-transform: uppercase;
+							padding:0px;
+							position:absolute;
+							right:-20px;
+						}
+					}
+					.error{
+						position: absolute;
+						width: 100%;
+						top: -30px;
+						right:-20px;
+						padding: 5px;
+						border-radius: 5px 5px 5px 5px ;
+						@include bold(10px, #649a07);
+						line-height:1.3;
+						text-align:left;
+						&.filled{
+							background:$lightGreen;
+							border:1px solid $green;
+							top:-40px;
+							&:after{
+								@include PE();
+								width:16px;
+								height:14px;
+								background:url("../img/tooltip.png") center center no-repeat;
+								position:absolute;
+								bottom:-14px;
+								right:2px;
+							}
+						}
+					}
+					.parsley-errors-list{
+						@include transition(all 300ms);
+						position: absolute;
+						width: 100%;
+						top: -30px;
+						padding: 5px;
+						border-radius: 5px 5px 5px 5px ;
+						@include bold(10px, #649a07);
+						line-height:1.3;
+						text-align:left;
+						&.filled{
+							background:$lightGreen;
+							border:1px solid $green;
+							top:-45px;
+							&:after{
+								@include PE();
+								width:16px;
+								height:14px;
+								background:url("../img/tooltip.png") center center no-repeat;
+								position:absolute;
+								bottom:-14px;
+								left:50%;
+								margin-left:-8px;
+							}
+						}
+					}
+				}
+				&.links{
+					a{
+						@include regular(9px, #6c6c6c);
+						float:left;
+						&:hover{
+							color:$greenText;
+						}
+						&.pop{
+							float:right;
+							margin-right:15px;
+						}
+					}
+				}
+			}
+		}
+	}

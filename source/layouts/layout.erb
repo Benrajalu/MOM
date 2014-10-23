@@ -75,6 +75,30 @@
             </ul>
         </nav>
 
+        <header id="head" class="row">
+            <form id="connect" action="#" type="POST" data-parsley-validate>
+                <p>Site réservé aux <strong>professionels</strong> de la restauration</p>
+                <h2>Mon compte pro</h2>
+                <div class="fields inline">
+                    <!-- En cas d'erreurs, ajouter la classe "error" sur le(s) champ(s) concerné, et la classe "filled" à l'élément suivant, rempli du bon message -->
+                    <p class="error"></p>
+                    <div>
+                        <input type="text" name="login" placeholder="Identifiant" data-parsley-required/>
+                    </div>
+                    <div class="right">
+                        <input type="password" name="pass" placeholder="Mot de passe" data-parsley-required/>
+                    </div>
+                    <input type="submit" value="ok" />
+                </div>
+                <div class="links inline">
+                    <%= link_to "Créer un compte", "#" %>
+                    <%= link_to "Mot de passe oublié ?", "#pass", :class=>"pop" %>
+                </div>
+
+
+            </form>
+        </header>
+
         
         <%= yield %>
 
@@ -84,6 +108,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <%= javascript_include_tag 'vendor/jquery.flexslider.js' %>
+        <%= javascript_include_tag 'vendor/parsley-fr.js' %>
         <%= javascript_include_tag 'vendor/parsley.js' %>
         <%= javascript_include_tag 'plugins.js' %>
 
