@@ -1,0 +1,131 @@
+#signUp{
+	background:url("../img/signupBG.jpg") center center no-repeat;
+	padding:16px 65px;
+	height:607px;
+	position:relative;
+	margin-bottom:5px;
+
+	.pageTitle{
+		font-family:Helvetica, Arial, sans-serif;
+		font-size:26px;
+		color:#393939;
+		position:relative;
+		margin-bottom:22px;
+		&:before{
+			@include PE();
+			content:">";
+			width:25px; 
+			height:25px;
+			background:$green;
+			color:#fff;
+			line-height: 25px;
+			font-size:20px;
+			text-align:center;
+			@include border-radius(99px);
+			left:-30px;
+			top:50%;
+			margin-top:-13.5px;
+			position:absolute;
+		}
+	}
+
+	p{
+		@include regular(12px, #212903);
+		margin-bottom:5px;
+	}
+
+	form{
+		margin:20px 0px;
+		.longLabels{
+			margin-bottom:15px;
+			>label, input[type="text"], input[type="email"], input[type="password"], select, .inline, .field > label {
+				@include inline-block();
+				margin-bottom:5px;
+				position:relative;
+				top:-2px;
+			}
+			label, .inline label{
+				width:345px;
+				@include regular(12px, #212903);
+				text-align:left;
+			}
+			input[type="text"], input[type="email"], input[type="password"], select{
+				border:1px solid #26150a;
+				background:#fff;
+				@include regular(12px, #212903);
+				padding:0 3px;
+				@include border-radius(0px);
+				width:184px;
+				height:17px;
+				&:active, &:focus{
+					outline:0px;
+				}
+				&.parsley-error, &.error{
+					border:1px solid $error;
+				}
+			}
+			select{
+				width:100px;
+			}
+		}
+
+		.field{
+			position:relative;
+			width:184px + 350px;
+			.parsley-errors-list{
+				padding:0px 10px;
+				text-align: right;
+				@include regular(12px, $error);
+				position:absolute;
+				top:-1px;
+				height:16px;
+				right:190px;
+				&.filled{
+					background:#fff;
+					border:1px solid $error;
+					&:after{
+						@include PE();
+						width:9px;
+						height:16px;
+						position:absolute;
+						top:-1px;
+						right:-8px;
+						background:url("../img/errorArrow.png") center center no-repeat;
+					}
+				}
+			}
+		}
+
+		> label{
+			@include inline-block();
+			max-width:421px;
+			@include regular(11px, #212903);
+		}
+
+		input[type="submit"]{
+			@include transition(all 200ms);
+			display:block;
+			@include regular(14.7px, #fff);
+			background:$green;
+			@include border-radius(99px);
+			width:77px;
+			height:20px;
+			border:0px;
+			@include box-shadow(0px 0px 0px transparent);
+			line-height:17px;
+			position:relative;
+			margin:30px 0px;
+			left:270px;
+			cursor:pointer;
+			&:hover{
+				background:$lightGreen;
+				color:#649a07;
+			}
+		}
+	}
+
+	.error.filled{
+		@include regular(12px, $error);
+		margin:10px 0px;
+	}
+}
