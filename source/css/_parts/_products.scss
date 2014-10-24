@@ -1,0 +1,363 @@
+.wysiwyg{
+	p{
+		@include regular(12px, $blackText);
+		line-height:1.2;
+		margin-bottom:0px;
+		&.ingredients{
+			font-family: 'bold';
+			> span{
+				font-size:1.1em;
+			}
+		}
+	}
+
+	.chef{
+		width:438px;
+		height:213px;
+		position:relative;
+		background:url('../img/chef.png') center center no-repeat;
+		margin:40px 0px 0px 0px;
+		.rotate{
+			width:290px;
+			position:absolute;
+			right:35px;
+			top:100px;
+			-webkit-transform: rotate(-3deg);
+			-moz-transform: rotate(-3deg);
+			-o-transform: rotate(-3deg);
+			writing-mode: lr-tb;
+			p{
+				@include regular(12px, #fff);
+			}
+		}
+	}
+}
+
+
+.product{
+	.pageTitle{
+		@include regular(26px, #393939);
+		margin-bottom:40px;
+		display:block;
+		position:relative;
+		z-index:1;
+		&:before{
+			@include PE();
+			content:">";
+			width:25px; 
+			height:25px;
+			background:$green;
+			color:#fff;
+			line-height: 23px;
+			font-size:20px;
+			text-align:center;
+			@include border-radius(99px);
+			left:-30px;
+			top:50%;
+			margin-top:-10.5px;
+			position:absolute;
+		}
+		&.top{
+			&:before{
+				top:0px;
+				margin-top:0px;
+			}
+		}
+		&.in{
+			&:before{
+				position:static;
+				@include inline-block();
+				margin:-3px 5px 0px;
+			}
+		}
+	}
+
+	.button{
+		@include regular(14px, #fff);
+		@include transition(all 200ms);
+		background:$green;
+		@include border-radius(99px);
+		padding:0px 10px;
+		height:20px;
+		line-height: 20px;
+		text-decoration:none;
+		&.back{
+			position:absolute;
+			top:20px;
+			right:50px;
+			z-index:4;
+		}
+		&:hover{
+			background:$lightGreen;
+			color:$darkGreen;
+		}
+	}
+
+	&.detail{
+		.banner{
+			img{
+				display:block;
+			}
+		}
+
+		.description{
+			position:relative;
+			@include clearfix();
+			padding:10px 70px;
+			margin-bottom:40px;
+			.left{
+				float:left;
+				width:465px;
+			}
+
+			.right{
+				float:right;
+				width:285px;
+				> img{
+					max-width:100%;
+				}
+			}
+
+			.nutrition.table{
+				width:260px;
+				margin:0 auto;
+				th{
+					background:#437305;
+					@include medium(11.1px, #fff);
+				}
+				tr{
+					background:#eef8c3;
+					border-top:1px solid #fff;
+					@include medium(11.1px, $blackText);
+					em{
+						text-decoration: underline;
+					}
+					&:nth-child(odd){
+						background:#95b411;
+						@include medium(11.1px, #fff);
+					}
+					th, td{
+						text-align:center;
+						padding:4px 3px;
+					}
+				}
+			}
+		}
+
+		.line{
+			padding:0px 40px;
+			@include clearfix();
+			margin-bottom:5px;
+			.left{
+				float:left;
+				width:210px;
+				padding-top:25px;
+			}
+			.right{
+				padding:25px 0px 40px 15px;
+				float:right;
+				width:670px;
+				border-left:1px dotted #918b8b;
+				.product.teaser{
+					@include inline-block();
+					height:262px; 
+					width:325px;
+				}
+			}
+		}
+	}
+
+	&.teaser{
+		text-align:center;
+		background:#d0e373;
+		position:relative;
+		display:block;
+		line-height:262px;
+		margin-bottom:10px;
+		&.bg-white{
+			.name a{
+				color:$greenText;
+			}
+			.button{
+				background:$green;
+				color:#fff;
+				&:hover{
+					color:$darkGreen;
+					background-color:$lightGreen;
+				}
+			}
+		}
+		.name{
+			display:block;
+			position:absolute;
+			width:100%;
+			z-index: 2;
+			top:1px;
+			height:46px;
+			line-height: 46px;
+			a{
+				@include ventura(20px, #fff);
+				text-transform: uppercase;
+				text-decoration: none;
+				@include inline-block();
+				line-height: 1;
+				padding:0 20px;
+			}
+		}
+		.packshot{
+			@include inline-block();
+			width:100%;
+			position:relative;
+			z-index:1;
+			img{
+				display:block;
+				margin:0 auto;
+			}
+
+		}
+		.button{
+			position:absolute;
+			line-height:20px;
+			display:block;
+			left:0;
+			right:0;
+			margin:0 auto;
+			width:180px;
+			bottom:15px;
+			background:#fff;
+			color:$blackText;
+			&:hover{
+				color:#fff;
+				background:$green;
+			}
+		}
+	}
+
+	&.range{
+		.category{
+			margin-top:10px;
+			.pageTitle{
+				margin-left:40px;
+				margin-bottom:20px;
+			}
+			.product.teaser{
+				@include inline-block();
+				width:240px;
+				margin-bottom:3px;
+				height:270px;
+				line-height: 270px;
+			}
+		}
+	}
+
+	&.tech{
+		padding-left:94px;
+		margin-bottom:47px;
+		.title{
+			@include regular(26px, #393939);
+			margin-bottom:40px;
+			display:block;
+			position:relative;
+			span{
+				@include inline-block();
+				padding-right:30px;
+				background:#fff;
+				position:relative;
+				z-index:2;
+			}
+			&:after{
+				@include PE();
+				height:1px;
+				width:100%;
+				position:absolute;
+				left:0px;
+				bottom:1px;
+				border-top:1px dotted #918b8b;
+				z-index:1;
+			}
+			&:before{
+				@include PE();
+				content:">";
+				width:25px; 
+				height:25px;
+				background:$green;
+				color:#fff;
+				line-height: 23px;
+				font-size:20px;
+				text-align:center;
+				@include border-radius(99px);
+				left:-30px;
+				top:50%;
+				margin-top:-10.5px;
+				position:absolute;
+			}
+		}
+		&:nth-child(odd){
+			.title{
+				&:before{
+					background:#c51064;
+				}
+			}
+		}
+
+		.contents{
+			display:block;
+			line-height:1;
+			.list, .productImage{
+				@include inline-block();
+				vertical-align: middle;
+				line-height:1;
+			}
+			.list{
+				margin-right:50px;
+				li{
+					margin-bottom:5px;
+					max-width:550px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					a{
+						@include regular(12px, $blackText);
+						@include transition(all 200ms);
+						&:hover{
+							color:$greenText;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	// Background styles
+	&.bg-pink{
+		background-color:#fb82bb;
+	}
+	&.bg-orange{
+		background-color:#fdb16b;
+	}
+	&.bg-red{
+		background-color:#cb545d;
+	}
+	&.bg-blue{
+		background-color:#5aaedc;
+	}
+	&.bg-light-orange{
+		background-color:#fab677;
+	}
+	&.bg-brown{
+		background-color:#bf655c;
+	}
+	&.bg-peach{
+		background-color:#f5a480;
+	}
+	&.bg-yellow{
+		background-color:#fcd55f;
+	}
+	&.bg-light-yellow{
+		background-color:#fde088;
+	}
+	&.bg-white{
+		background-color:#fff;
+	}
+}

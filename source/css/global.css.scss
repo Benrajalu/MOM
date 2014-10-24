@@ -13,12 +13,15 @@
 // Parts
 @import "_parts/structure";
 @import "_parts/mainMenu";
+@import "_parts/secondaryMenu";
 @import "_parts/head";
 @import "_parts/foot";
 
 // Page specifics
 @import "_parts/home";
 @import "_parts/signup";
+
+@import "_parts/products";
 
 // Pages
 @import "_parts/all";

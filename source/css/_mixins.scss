@@ -40,3 +40,9 @@
 	font-size:$size;
 	color:$color;
 }
+
+@mixin ventura($size, $color){
+	font-family:'ventura', sans-serif;
+	font-size:$size;
+	color:$color;
+}

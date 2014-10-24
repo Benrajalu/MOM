@@ -134,6 +134,29 @@
           </form>
         </div>
 
+        <div id="connectPop" class="popUp mfp-hide">
+          <h4 class="access">Accès sécurisé</h4>
+          <p>Pour accéder à ce service, merci de vous identifier :</p>
+          <form id="passGenerating" action="#" type="POST" data-parsley-validate>
+            <div class="fields inline">
+                <div>
+                    <input type="text" name="login" placeholder="Identifiant" data-parsley-required/>
+                </div>
+                <div class="right">
+                    <input type="password" name="pass" placeholder="Mot de passe" data-parsley-required/>
+                    <a href="#passRetrival" class="pop">Mot de passe oublié ?</a>
+                </div>
+                <input type="submit" value="ok" />
+                <!-- En cas d'erreurs, ajouter la classe "error" sur le(s) champ(s) concerné, et la classe "filled" à l'élément suivant, rempli du bon message -->
+                <p class="error"></p>
+            </div>
+            <p class="signUp">
+                <strong>Vous n'avez pas encore de compte ?</strong> <br/>
+                <%= link_to "Inscrivez-vous", "signup.html", :class=>"signUp" %>
+            </p>
+          </form>
+        </div>
+
 
 
 

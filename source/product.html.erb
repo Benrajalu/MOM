@@ -1,0 +1,107 @@
+---
+title: Gamme produit
+description: Gamme produit
+---
+
+
+		<nav id="secondaryNav" class="noMarg">
+			<ul>
+				<li><%= link_to "Mont-Blanc", "fiches.html" %></li>
+				<li><%= link_to "Materne", "fiches.html" %></li>
+				<li><%= link_to "Gloria", "fiches.html" %></li>
+			</ul>
+		</nav>
+
+		<div class="product detail">
+
+			<div class="banner">
+				<%= image_tag "products/pomPotesBanner.png", :alt=>"Product banner" %>
+			</div>
+
+			<hr class="dotted" />
+
+
+			<article class="description">
+				<h1 class="pageTitle">Pom'Potes - Nature</h1>
+				<%= link_to "Retour à la liste des produits" , "category.html", :class=>"button back" %>
+
+				<section class="contents">
+					<div class="left wysiwyg">
+						<p>Totatur, et odiorem porumquis expliae corionsed quo bea nis exceriasit reped everciis plandunt id quasper feritist estrum as aut es dis es minte cullaborem facesciis accae landi dundam quam di cus quod exerum si blautent. Ribeaque voloribus.</p>
+						<p class="ingredients"><span>Ingrédients :</span> pomme 69%, poire 26,1%, sucre, arôme naturel de poire, antioxydant : acide ascorbique...</p>
+						
+						<aside class="chef">
+							<div class="rotate">
+								<p>Totatur, et odiorem porumquis expliae corionsed quo bea nis exceriasit reped everciis plandunt id cullaborem facesciis accae landi dundam quam di cus quod exerum si blautent. Ribeaque voloribus. quam everorepera a.</p>
+							</div>
+						</aside>
+					</div>
+
+					<div class="right">
+						<%= image_tag "products/pomPotesPack.png", :alt=>"Pack Pom'Potes" %>
+
+						<table class="nutrition table">
+							<tr>
+								<th>Valeurs nutritionnelles <br/>moyennes</th>
+								<th>Pour 100g</th>
+							</tr>
+							<tr>
+								<td>Energie</td>
+								<td>(302 kj) <br/>71 kcal</td>
+							</tr>
+							<tr>
+								<td><em>Matières grasses</em> <br/>dont acides gras saturés</td>
+								<td><em>20g</em> <br/>15g</td>
+							</tr>
+							<tr>
+								<td><em>Glucides</em> <br/>dont sucres</td>
+								<td><em>0.5g</em> <br/>0,3g</td>
+							</tr>
+							<tr>
+								<td>Protéines</td>
+								<td>1,5g</td>
+							</tr>
+							<tr>
+								<td>Sel</td>
+								<td>1,5g</td>
+							</tr>
+							<tr>
+								<td>Calcium</td>
+								<td>xxx mg <br/>xxx% des AR*</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+			</article>
+				
+			<hr class="dotted" />
+
+			<div class="line">
+				<div class="left">
+					<h2 class="pageTitle top">Besoin <br/>d'un service, <br/>une question ?</h2>
+					<ul class="servicesList">
+						<li class="commercial"><%= link_to "<span class='icon'></span><span class='text'>Service <br/>commercial</span>", "#" %></li>
+						<li class="produit"><%= link_to "<span class='icon'></span><span class='text'>Information <br/>produit</span>", "#" %></li>
+						<li class="recrutement"><%= link_to "<span class='icon'></span><span class='text'>Recrutement</span>", "#" %></li>
+						<li class="industrie"><%= link_to "<span class='icon'></span><span class='text'>Pôle <br/>industriel</span>", "#" %></li>
+					</ul>
+				</div>
+				<div class="right">
+					<h2 class="pageTitle in">Les produits</h2>
+
+					<article class="product teaser">
+						<h3 class="name"><%= link_to "Pack de 18 gourdes", "#connectPop", :class=>"pop" %></h3>
+						<% link_to "#connectPop", :class=>"pop packshot" do %><%= image_tag "products/pack18PomPotes.png", :alt=>"packshot" %><% end %>
+						<%= link_to "Voir la fiche technique", "#connectPop", :class=>"button pop" %>
+					</article>
+
+					<article class="product teaser">
+						<h3 class="name"><%= link_to "Pack de 36 gourdes", "#connectPop", :class=>"pop" %></h3>
+						<% link_to "#connectPop", :class=>"pop packshot" do %><%= image_tag "products/pack36PomPotes.png", :alt=>"packshot" %><% end %>
+						<%= link_to "Voir la fiche technique", "#connectPop", :class=>"button pop" %>
+					</article>
+				</div>
+			</div>
+		
+
+		</div>
