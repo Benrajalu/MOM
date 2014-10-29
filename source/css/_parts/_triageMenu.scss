@@ -1,0 +1,32 @@
+// Menu used to filter option on Phototheque page
+	#triageNav{
+		display: block;
+		padding:25px 90px;
+		border-bottom:1px dotted #918b8b;
+		@include clearfix();
+		.options{
+			float:left;
+			margin-right:90px;
+			h4{
+				@include regular(14px, #393939);
+				margin-bottom: 10px;
+			}
+
+			ul{
+				li{
+					float:left;
+					a{
+						@include transition(all 300ms);
+						@include regular(12px, #393939);
+						padding-right: 40px;
+						&:hover{
+							color:$greenText;
+						}
+						img{
+							max-width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}

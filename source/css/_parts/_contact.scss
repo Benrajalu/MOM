@@ -1,0 +1,163 @@
+#contact{
+	background:url("../img/contactBG.jpg") center center no-repeat;
+	padding:50px 60px;
+	height:539px;
+	position:relative;
+	margin-bottom:5px;
+
+	.pageTitle{
+		font-family:Helvetica, Arial, sans-serif;
+		font-size:26px;
+		color:#393939;
+		position:relative;
+		margin-bottom:22px;
+		&:before{
+			@include PE();
+			content:">";
+			width:25px; 
+			height:25px;
+			background:$green;
+			color:#fff;
+			line-height: 25px;
+			font-size:16px;
+			text-align:center;
+			@include border-radius(99px);
+			left:-30px;
+			top:50%;
+			margin-top:-13.5px;
+			position:absolute;
+		}
+	}
+
+	.contactCard{
+		display:block;
+		position:absolute;
+		width:194px;
+		height:253px;
+		top:149px;
+		padding:0 6px;
+		h2{
+			height:66px;
+			line-height:66px;
+			border-bottom:1px dotted #fff;
+			margin-bottom:10px;
+			position:relative;
+			span{
+				@include inline-block();
+				vertical-align: middle;
+				line-height: 1;
+				@include regular(20px, #fff);
+				padding-left:50px;
+			}
+			&:before{
+				content:"";
+				display:block;
+				position:absolute;
+				top:20px;
+				left:10px;
+			}
+		}
+		p{
+			padding:0 10px;
+			@include regular(14px, #fff);
+			span{
+				font-size:16.6px;
+			}
+			&.phone{
+				margin:20px 0 15px 0;
+				font-size:19px;
+				padding-left:37px;
+				position:relative;
+				&:before{
+					@include PE();
+					width:28px;
+					height:29px;
+					background:url('../img/phoneIco.png') center center no-repeat;
+					left:6px;
+					top:-7px;
+					position:absolute;
+				}
+			}
+			&.mail{
+				@include inline-block();
+				margin:0px 0 15px 30px;
+				background:#fff;
+				@include border-radius(99px);
+				color:#393939;
+				font-size:13px;
+				padding:4px 5px;
+				position:relative;
+				&:before{
+					@include PE();
+					position:absolute;
+					width:16px;
+					height:20px;
+					background:url('../img/mailIco.png') center center no-repeat;
+					left:-23px;
+					top:-1px;
+				}
+			}
+		}
+		&.commercial{
+			background:url("../img/contactCom.png") center center no-repeat;
+			left:100px;
+		}
+		&.produit{
+			height:266px;
+			background:url("../img/contactProd.png") center center no-repeat;
+			left:298px;
+		}
+		&.recrutement{
+			height:264px;
+			width:197px;
+			background:url("../img/contactRec.png") center center no-repeat;
+			right:284px;
+		}
+		&.indus{
+			height:266px;
+			background:url("../img/contactIndus.png") center center no-repeat;
+			right:84px;
+		}
+
+		&.commercial{
+			h2:before{
+				top:17px;
+				width:30px;
+				height:37px;
+				background:url("../img/service-commercial-white.png") center center no-repeat;
+			}
+		}
+		&.produit{
+			h2:before{
+				top: 18px;
+				left: 7px;
+				width:36px;
+				height:35px;
+				background:url("../img/service-produit-white.png") center center no-repeat;
+			}
+		}
+		&.recrutement{
+			h2:before{
+				width:35px;
+				height:32px;
+				background:url("../img/service-recrutement-white.png") center center no-repeat;
+			}
+		}
+		&.indus{
+			h2{
+				span{
+					padding-left:55px;
+				}
+			}
+			h2:before{
+				top:11px;
+				left:7px;
+				width:39px;
+				height:40px;
+				background:url("../img/service-indus-white.png") center center no-repeat;
+			}
+		}
+		
+	}
+
+}
