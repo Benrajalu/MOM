@@ -1,0 +1,156 @@
+---
+title: Détail d'une recette
+description: "Page recettes : détail"
+---	
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=248444498560199&version=v2.0";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+
+		<div class="line borders">
+
+			<div class="aside wrap">
+				<nav id="triageNav">
+					<h3 class="pageTitle top">Rechercher une recette</h3>
+					<div class="options">
+						<h4>Recherche par marque</h4>
+						<ul>
+							<li><%= link_to "Mont-Blanc", "recipe-category.html" %></li>
+							<li><%= link_to "Gloria", "recipe-category.html" %></li>
+						</ul>
+					</div>
+					<div class="options">
+						<h4>Recherche par critère</h4>
+						<ul>
+							<li><%= link_to "Entrée", "recipe-category.html" %></li>
+							<li><%= link_to "Plat principal", "recipe-category.html" %></li>
+							<li><%= link_to "Dessert", "recipe-category.html" %></li>
+							<li><%= link_to "Goûter", "recipe-category.html" %></li>
+						</ul>
+					</div>
+				</nav>
+
+				<div class="newsletter">
+					<h3 class="pageTitle">Newsletter</h3>
+					<section class="content">
+						<p>Inscrivez-vous et profitez de nos offres !</p>
+					</section>
+					<% link_to "#newsletter" do %><%= image_tag "newsletter.png", :alt=>"newsletter" %><% end %>
+				</div>
+			</div>
+
+			<article class="recipes recipeDetail">
+				<section class="head">
+					<h2 class="pageTitle in">Crêpes courgettes mimolette</h2>
+					<%= link_to "Retour aux recettes", "recipe-category.html", :class=>"button" %>
+				</section>
+
+				<div class="recipeID">
+					<div class="left">
+						<%= image_tag "recipes/courgettes.jpg", :alt=>"Image recette" %>
+						<div class="share"><span>Partagez la recette :</span> <div class="fb-like" data-href="" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>
+					</div>
+					<div class="right">
+						<ul class="scale">
+							<li class="size">8 pers.</li>
+							<li class="type">Type de recette : <span>Plat</span></li>
+							<li class="time">Préparation : <span>20 min.</span></li>
+							<li class="easy">Difficulté : <span>Facile</span></li>
+							<li class="cook">Cuisson : <span>5 min.</span></li>
+							<li class="price">Tarif : <span>Bon marché</span></li>
+						</ul>
+
+						<aside class="product wysiwyg">
+							<%= image_tag "products/gloriaLaitSmall.png", :alt=>"Product packshot" %>
+							<section class="content">
+								<h3>Le lait entier Gloria...</h3>
+								<p>...est tout aussi liant et onctueux que la crème liquide UHT 30% de M.G. mais avec  4 fois moins de matières grasses.</p>
+								<%= link_to "Voir le produit", "product.html", :class=>"button" %>
+							</section>
+						</aside>
+					</div>
+				</div>
+
+				<div class="recipeInfo">
+					<section class="left wysiwyg">
+						<h4>Ingredients</h4>
+						<p>La base Gloria</p>
+						<ul>
+							<li>> 30 cl de lait Gloria</li>
+							<li>> 2 œufs</li>
+							<li>> 125g de farine fluide</li>
+							<li>> 2 cuillères à soup d’huile</li>
+							<li>> Sel et poivre</li>
+						</ul>
+
+						<p>Ingrédients à ajouter à la base Gloria :</p>
+						<ul>
+							<li>> 100g de mimolettes</li>
+							<li>> 1 courgette</li>
+						</ul>
+					</section>
+					<section class="right wysiwyg">
+						<h4>Préparation</h4>
+						<ol class="numbered">
+							<li>Otatur, et odiorem porumquis expliae corionsed quo bea nis exceriasit reped.</li>
+							<li>Leverciis plandunt id quasper feritist estrum as aut es dis es minte cullaborem facesciis accae landi dundam quam di cus quod exerum si blautent.</li>
+							<li>Ribeaque voloribus. Tia atempor porecessum fugit, sam voluptatenet que nobis sita ea sus et lam</li>
+							<li>conem utemporitint quisinc turecta tionse pliquos esequassunt ea vollore pudant volorum fuga. Tus magnimus ipietur molupta assit expel ipsunt.</li>
+						</ol>
+
+					</section>
+				</div>
+
+				<aside class="recipes">
+					<h3 class="pageTitle in">Gloria vous propose aussi :</h3>
+					<ul>
+						<li class="recipe">
+							<h3><a href="recipe-detail.html">Coquetiers pommes de terre escargots</a></h3>
+							<a href="recipe-detail.html"> <img alt="Image recette" src="img/recipes/cequetiersSmall.jpg" /></a>
+							<ul class="scale">
+								<li class="size">8 pers.</li>
+								<li class="time">20 min.</li>
+							</ul>
+							<ul class="desc">
+								<li>Produit : boîte de 410 g</li>
+								<li>Difficulté : moyen</li>
+								<li>Tarif : bon marché</li>
+							</ul>
+						</li>
+						<li class="recipe">
+							<h3><a href="recipe-detail.html">Tarte aux oignons</a></h3>
+							<a href="recipe-detail.html"> <img alt="Image recette" src="img/recipes/tarteOignonsSmall.jpg" /></a>
+							<ul class="scale">
+								<li class="size">8 pers.</li>
+								<li class="time">20 min.</li>
+							</ul>
+							<ul class="desc">
+								<li>Produit : boîte de 410 g</li>
+								<li>Difficulté : moyen</li>
+								<li>Tarif : bon marché</li>
+							</ul>
+						</li>
+						<li class="recipe">
+							<h3><a href="recipe-detail.html">Quiches au légume et au cantal</a></h3>
+							<a href="recipe-detail.html"> <img alt="Image recette" src="img/recipes/quichesSmall.jpg" /></a>
+							<ul class="scale">
+								<li class="size">8 pers.</li>
+								<li class="time">20 min.</li>
+							</ul>
+							<ul class="desc">
+								<li>Produit : boîte de 410 g</li>
+								<li>Difficulté : moyen</li>
+								<li>Tarif : bon marché</li>
+							</ul>
+						</li>
+					</ul>
+				</aside>
+				
+			</article>
+		</div>

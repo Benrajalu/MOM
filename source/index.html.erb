@@ -50,11 +50,11 @@ description: Home
 				<%= image_tag "gloria.png", :alt=>"gloria" %>
 			</article>
 			<article class="box quarter newsletter">
-				<h3><%= link_to "Newsletter", "#" %></h3>
+				<h3><%= link_to "Newsletter", "#newsletter", :class=>"pop" %></h3>
 				<section class="content">
 					<p>Inscrivez-vous et profitez de nos offres !</p>
-					<%= link_to "+ d'info", "#" %>
+					<%= link_to "+ d'info", "#newsletter", :class=>"pop" %>
 				</section>
-				<% link_to "#newsletter" do %><%= image_tag "newsletter.png", :alt=>"newsletter" %><% end %>
+				<% link_to "#newsletter", :class=>"pop"  do %><%= image_tag "newsletter.png", :alt=>"newsletter" %><% end %>
 			</article>
 		</div>

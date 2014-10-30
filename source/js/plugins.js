@@ -19,6 +19,10 @@ if (!(window.console && console.log)) {
 
 window.ParsleyValidator.setLocale('fr');
 
+$(".fb-like").each(function(){
+    $(this).attr("data-href", document.URL);
+})
+
 
 jQuery(window).load(function () {
 	  jQuery("#mainSlider").flexslider({

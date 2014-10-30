@@ -3,7 +3,6 @@
 	.line{
 		&.borders{
 			border-bottom:1px dotted #918b8b;
-			border-top:1px dotted #918b8b;
 		}
 		.aside{
 			width:252px;
@@ -71,7 +70,7 @@
 			}
 		}
 
-
+		// recipe lists
 		.recipes{
 			float:right;
 			width:723px;
@@ -205,4 +204,229 @@
 				}
 			}
 		}
+		
+		// Recipe page
+		.recipeDetail{
+			.head{
+				@include clearfix();
+				position:relative;
+				.button{
+					@include regular(14px, #fff);
+					@include transition(all 200ms);
+					background:$green;
+					@include border-radius(99px);
+					padding:0px 10px;
+					height:20px;
+					line-height: 20px;
+					text-decoration:none;
+					position:absolute;
+					top:5px;
+					right:20px;
+					z-index:2;
+					&:hover{
+						background:$lightGreen;
+						color:$darkGreen;
+					}
+				}
+				.pageTitle{
+					padding-right:160px;
+					margin-bottom:15px;
+					position:relative;
+					z-index: 1;
+				}
+			}
+
+			.recipeID{
+				@include clearfix();
+				border-bottom:1px dotted #918b8b;
+				.left{
+					float:left;
+					width:358px;
+					.share{
+						line-height:50px;
+						border-top:1px dotted #918b8b;
+						span{
+							@include medium(14px, #212903);
+							padding-left:30px;
+						}
+						.fb-like{
+							top:-15px;
+							left:-10px;
+						}
+					}
+				}
+				.right{
+					float:right;
+					width:349px;
+					
+					ul.scale{
+						@include clearfix();
+						padding:15px 0px 0px 20px;
+						border-bottom:1px dotted #918b8b;
+						margin-bottom:15px;
+						li{
+							@include medium(13px, $blackText);
+							position:relative;
+							padding-left:40px;
+							margin-bottom:10px;
+							float:left;
+							width:48%;
+							span{
+								display:block;
+								margin-top:3px;
+							}
+							&:before{
+								@include PE();
+								background-image:url("../img/recipeSpriteFull.png");
+								background-repeat:no-repeat;
+								position:absolute;
+								left:0px;
+								top:0px;
+							}
+							&.size{
+								&:before{
+									background-position:top left;
+									width:26px;
+									height:26px;
+									top:-7px;
+								}
+							}
+							&.time{
+								&:before{
+									background-position:-1px -37px;
+									width:28px;
+									height:28px;
+								}
+							}
+							&.type{
+								padding-left:55px;
+								&:before{
+									background-position:top right;
+									width:45px;
+									height:17px;
+								}
+							}
+							&.easy{
+								padding-left:55px;
+								&:before{
+									background-position:right -32px;
+									width:36px;
+									height:33px;
+								}
+							}
+							&.price{
+								padding-left:55px;
+								&:before{
+									background-position:bottom right;
+									width:36px;
+									height:30px;
+								}
+							}
+							&.cook{
+								&:before{
+									background-position:bottom left;
+									width:29px;
+									height:30px;
+								}
+							}
+						}
+					}
+
+					.product{
+						display:table;
+						img, .content{
+							display:table-cell;
+							vertical-align: middle;
+						}
+						.content{
+							padding:0px 40px 30px 5px;
+							position:relative;
+							h3{
+								@include medium(14px, #212903);
+								margin-bottom:10px;
+							}
+							p{
+								@include medium(12px, $blackText);
+							}
+							.button{
+								position:absolute;
+								bottom:20px;
+								right:40px;
+							}
+						}
+					}
+				}
+			}
+
+			.recipeInfo{
+				padding:5px 0px;
+				border-bottom:1px dotted #918b8b;
+				.left, .right{
+					@include inline-block();
+					padding:15px 25px;
+					vertical-align: top;
+					h4{
+						@include medium(14.7px, #fff);
+						@include inline-block();
+						line-height: 17px;
+						height:18px;
+						@include border-radius(99px);
+						padding:0 15px;
+						margin-bottom:18px;
+					}
+				}
+				.left{
+					width:297px;
+					background:#fcde74;
+					h4{
+						background:#e5b404;
+					}
+					p, ul li{
+						@include medium(12px, #4c3c02);
+					}
+					ul li{
+						list-style-type: none;
+					}
+					p{
+						margin-bottom:10px;
+					}
+					ul{
+						margin-bottom:15px;
+					}
+				}
+				.right{
+					width:411px;
+					background:#d0e373;
+					h4{
+						background:$green;
+					}
+					ol li{
+						@include medium(12px, #212903);
+						margin-bottom:5px;
+					}
+				}
+			}
+
+			.recipes{
+				border:0px;
+				float:none;
+				width:100%;
+				li.recipe{
+					width:231px;
+					h3{
+						height:43px;
+						line-height: 43px;
+						text-align: center;
+					}
+					ul.scale, ul.desc{
+						float:left;
+						width:auto;
+						li{
+							@include medium(12px, $blackText);
+						}
+					}
+				}
+			}
+		}
+	
 	}

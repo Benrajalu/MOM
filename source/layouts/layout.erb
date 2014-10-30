@@ -31,9 +31,9 @@
                 <li>
                     <%= link_to  "Nos produits pro", "#" %>
                     <ul>
-                        <li><%= link_to  "Mont-Blanc", "#" %></li>
-                        <li><%= link_to  "Gloria", "#" %></li>
-                        <li><%= link_to  "Materne", "#" %></li>
+                        <li><%= link_to  "Mont-Blanc", "category.html" %></li>
+                        <li><%= link_to  "Gloria", "category.html" %></li>
+                        <li><%= link_to  "Materne", "category.html" %></li>
                     </ul>
                 </li>
                 <li>
@@ -45,33 +45,33 @@
                     </ul>
                 </li>
                 <li>
-                    <%= link_to  "Recettes", "#" %>
+                    <%= link_to  "Recettes", "recipes.html" %>
                     <ul>
-                        <li><%= link_to  "Les entrées", "#" %></li>
-                        <li><%= link_to  "Les plats", "#" %></li>
-                        <li><%= link_to  "Desserts", "#" %></li>
-                        <li><%= link_to  "Goûters", "#" %></li>
-                        <li><%= link_to  "Mont-Blanc", "#" %></li>
-                        <li><%= link_to  "Gloria", "#" %></li>
+                        <li><%= link_to  "Les entrées", "recipe-category.html" %></li>
+                        <li><%= link_to  "Les plats", "recipe-category.html" %></li>
+                        <li><%= link_to  "Desserts", "recipe-category.html" %></li>
+                        <li><%= link_to  "Goûters", "recipe-category.html" %></li>
+                        <li><%= link_to  "Mont-Blanc", "recipe-category.html" %></li>
+                        <li><%= link_to  "Gloria", "recipe-category.html" %></li>
                     </ul>
                 </li>
                 <li>
                     <%= link_to  "Fiches techniques", "#" %>
                     <ul>
-                        <li><%= link_to  "Mont-Blanc", "#" %></li>
-                        <li><%= link_to  "Gloria", "#" %></li>
-                        <li><%= link_to  "Materne", "#" %></li>
+                        <li><%= link_to  "Mont-Blanc", "fiches.html" %></li>
+                        <li><%= link_to  "Gloria", "fiches.html" %></li>
+                        <li><%= link_to  "Materne", "fiches.html" %></li>
                     </ul>
                 </li>
                 <li>
                     <%= link_to  "Photothèque et outils", "#" %>
                     <ul>
-                        <li><%= link_to  "Mont-Blanc", "#" %></li>
-                        <li><%= link_to  "Gloria", "#" %></li>
-                        <li><%= link_to  "Materne", "#" %></li>
+                        <li><%= link_to  "Mont-Blanc", "photos.html" %></li>
+                        <li><%= link_to  "Gloria", "photos.html" %></li>
+                        <li><%= link_to  "Materne", "photos.html" %></li>
                     </ul>
                 </li>
-                <li class="contact"><%= link_to  "Contact", "#" %></li>
+                <li class="contact"><%= link_to  "Contact", "contact.html" %></li>
             </ul>
         </nav>
 
@@ -108,8 +108,7 @@
                 <ul>
                     <li><%= link_to "Plan du site", "#" %></li>
                     <li><%= link_to "Mentions légales", "#" %></li>
-                    <li><%= link_to "Mentions sanitaires", "#" %></li>
-                    <li><%= link_to "Contact", "#" %></li>
+                    <li><%= link_to "Contact", "contact.html" %></li>
                     <li>Sites grand public :</li>
                     <li><%= link_to "Materne", "#" %></li>
                     <li><%= link_to "Gloria", "#" %></li>
@@ -128,6 +127,22 @@
           <p>Merci de saisir votre adresse email :</p>
           <form id="passGenerating" action="#" type="POST" data-parsley-validate>
             <input type="email" data-parsley-required="required" name="passEmail" placeholder="E-mail" />
+            <input type="submit" value="Envoyer" />
+            <!-- En cas d'erreurs, ajouter la classe "error" sur le(s) champ(s) concerné, et la classe "filled" à l'élément suivant, rempli du bon message -->
+            <p class="error"></p>
+          </form>
+        </div>
+
+        <div id="newsletter" class="popUp mfp-hide">
+          <h4 class="question">Inscription à la newsletter</h4>
+          <p>Pour vous inscrire à la newsletter, merci de renseigner votre e-mail :</p>
+
+          <form id="passGenerating" action="#" type="POST" data-parsley-validate>
+            <input type="email" data-parsley-required="required" name="passEmail" placeholder="E-mail" />
+            <div class="fields">
+                <label for="ok">Je souhaite recevoir des idées recettes, des courriers électroniques d’informations et offre promotionnelles sur les produits MOM</label>
+                <input type="checkbox" name="ok" id="ok" data-parsley-required="required" /> 
+            </div>
             <input type="submit" value="Envoyer" />
             <!-- En cas d'erreurs, ajouter la classe "error" sur le(s) champ(s) concerné, et la classe "filled" à l'élément suivant, rempli du bon message -->
             <p class="error"></p>
