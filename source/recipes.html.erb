@@ -1,0 +1,56 @@
+---
+title: Recettes
+description: Page recettes
+---
+
+		<div class="line borders">
+
+			<nav id="triageNav" class="aside">
+				<h3 class="pageTitle top">Rechercher une recette</h3>
+				<div class="options">
+					<h4>Recherche par marque</h4>
+					<ul>
+						<li><%= link_to "Mont-Blanc", "recipe-category.html" %></li>
+						<li><%= link_to "Gloria", "recipe-category.html" %></li>
+					</ul>
+				</div>
+				<div class="options">
+					<h4>Recherche par critère</h4>
+					<ul>
+						<li><%= link_to "Entrée", "recipe-category.html" %></li>
+						<li><%= link_to "Plat principal", "recipe-category.html" %></li>
+						<li><%= link_to "Dessert", "recipe-category.html" %></li>
+						<li><%= link_to "Goûter", "recipe-category.html" %></li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="recipes">
+				<h2 class="pageTitle in">Les recettes</h2>
+				<ul>
+					<li class="entrees"><% link_to "recipe-category.html" do %> <%= image_tag "entrees.jpg" , :alt=>"Les entrées" %><% end %></li>
+					<li class="plats"><% link_to "recipe-category.html" do %> <%= image_tag "plats.jpg" , :alt=>"Les plats principaux" %><% end %></li>
+					<li class="desserts"><% link_to "recipe-category.html" do %> <%= image_tag "desserts.jpg" , :alt=>"Les desserts" %><% end %></li>
+					<li class="gouters"><% link_to "recipe-category.html" do %> <%= image_tag "gouters.jpg" , :alt=>"Les goûters" %><% end %></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="line">
+
+			<div class="aside newsletter">
+				<h3 class="pageTitle">Newsletter</h3>
+				<section class="content">
+					<p>Inscrivez-vous et profitez de nos offres !</p>
+				</section>
+				<% link_to "#newsletter" do %><%= image_tag "newsletter.png", :alt=>"newsletter" %><% end %>
+			</div>
+
+			<div class="recipes">
+				<h2 class="pageTitle in">Les recettes par marques</h2>
+				<ul>
+					<li class="montBlanc"><% link_to "recipe-category.html" do %> <%= image_tag "montBlancRecipes.jpg" , :alt=>"Les recettes avec Mont-Blanc" %><% end %></li>
+					<li class="gloria"><% link_to "recipe-category.html" do %> <%= image_tag "gloriaRecipes.jpg" , :alt=>"Les recettes avec Gloria" %><% end %></li>
+				</ul>
+			</div>
+		</div>

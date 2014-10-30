@@ -1,0 +1,208 @@
+// Recipes landing, category and detail pages
+	
+	.line{
+		&.borders{
+			border-bottom:1px dotted #918b8b;
+			border-top:1px dotted #918b8b;
+		}
+		.aside{
+			width:252px;
+			float:left;
+			&.newsletter{
+				padding:25px 50px;
+				border:0px;
+				.pageTitle{
+					margin-bottom:15px;
+				}
+				p, a{
+					@include regular(14px, #6a6a6a);
+					@include transition(all 300ms);
+					margin-bottom:15px;
+				}
+			}
+			&#triageNav{
+				padding:25px 50px;
+				border:0px;
+				.options{
+					float:none;
+					width:175px;
+					margin:30px auto;
+					li{
+						display:block;
+						float:none;
+						margin-bottom:10px;
+					}
+					&:last-child{
+						margin-top:60px;
+					}
+				}
+			}
+
+			&.wrap{
+				#triageNav{
+					border:0px;
+					border-bottom:1px dotted #918b8b;
+					padding:25px 50px;
+					.options{
+						float:none;
+						width:175px;
+						margin:30px auto;
+						li{
+							display:block;
+							float:none;
+							margin-bottom:10px;
+						}
+						&:last-child{
+							margin-top:60px;
+						}
+					}
+				}
+				.newsletter{
+					padding:25px 50px;
+					.pageTitle{
+						margin-bottom:15px;
+					}
+					p, a{
+						@include regular(14px, #6a6a6a);
+						@include transition(all 300ms);
+						margin-bottom:15px;
+					}
+				}
+			}
+		}
+
+
+		.recipes{
+			float:right;
+			width:723px;
+			border-left:1px dotted #918b8b;
+			padding:25px 5px 5px;
+			.pageTitle{
+				margin-bottom:15px;
+			}
+			>ul{
+				text-align: left; 
+				>li{
+					@include inline-block();
+					margin-bottom: 5px;
+					width:354px;
+					a{
+						position:relative;
+						display:block;
+						overflow: hidden;
+						@include transition(all 200ms);
+						&:before{
+							@include PE();
+							position:absolute;
+							top:5px;
+							left:5px;
+							display:block;
+							z-index:999;
+						}
+						img{
+							display:block;
+							@include transition(all 200ms);
+							@include transform(scale(1));
+						}
+						&:hover{
+							background:$green;
+							img{
+								@include transform(scale(1.1));
+								opacity:0.8;
+							}
+						}
+					}
+					&.entrees a:before{
+						width:132px;
+						height:65px;
+						background:url("../img/les-entrees-text.png") center center no-repeat;
+					}
+					&.plats a:before{
+						width:110px;
+						height:61px;
+						background:url("../img/les-plats-text.png") center center no-repeat;
+					}
+					&.desserts a:before{
+						width:139px;
+						height:67px;
+						background:url("../img/les-desserts-text.png") center center no-repeat;
+					}
+					&.gouters a:before{
+						width:126px;
+						height:56px;
+						background:url("../img/les-gouters-text.png") center center no-repeat;
+					}
+					&.montBlanc a:before{
+						width:76px;
+						height:72px;
+						background:url("../img/montBlancSmall.png") center center no-repeat;
+					}
+					&.gloria a:before{
+						width:115px;
+						height:68px;
+						background:url("../img/gloriaSmall.png") center center no-repeat;
+					}
+
+					&.recipe{
+						text-align:center;
+						@include clearfix();
+						h3{
+							height:32px;
+							line-height:31px;
+							background:$green;
+							text-align:left;
+							a{
+								@include inline-block();
+								@include regular(14px, #fff);
+								line-height: 1;
+								vertical-align: middle;
+								padding:0px 10px;
+								text-decoration: none;
+								&:hover{
+									text-decoration: underline;
+								}
+							}
+						}
+						ul{
+							@include inline-block();
+							margin-top:20px;
+							vertical-align: top;
+							&.scale{
+								width:80px;
+								li{
+									@include regular(12px, $blackText);
+									position:relative;
+									padding-left:30px;
+									margin-bottom:25px;
+									&:before{
+										@include PE();
+										width:25px;
+										height:25px;
+										background-image:url("../img/recipeSprite.png");
+										background-repeat:no-repeat;
+										position:absolute;
+										left:0px;
+										top:-7px;
+									}
+									&.size{
+										&:before{
+											background-position:center bottom;
+										}
+									}
+								}
+							}
+							&.desc{
+								width:150px;
+								margin-left:20px;
+								li{
+									@include regular(12px, $blackText);
+									text-align: left;
+									margin-bottom: 5px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}

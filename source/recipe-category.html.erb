@@ -1,0 +1,95 @@
+---
+title: Catégorie de Recettes
+description: "Page recettes : catégorie"
+---
+
+		<div class="line borders">
+
+			<div class="aside wrap">
+				<nav id="triageNav">
+					<h3 class="pageTitle top">Rechercher une recette</h3>
+					<div class="options">
+						<h4>Recherche par marque</h4>
+						<ul>
+							<li><%= link_to "Mont-Blanc", "recipe-category.html" %></li>
+							<li><%= link_to "Gloria", "recipe-category.html" %></li>
+						</ul>
+					</div>
+					<div class="options">
+						<h4>Recherche par critère</h4>
+						<ul>
+							<li><%= link_to "Entrée", "recipe-category.html" %></li>
+							<li><%= link_to "Plat principal", "recipe-category.html" %></li>
+							<li><%= link_to "Dessert", "recipe-category.html" %></li>
+							<li><%= link_to "Goûter", "recipe-category.html" %></li>
+						</ul>
+					</div>
+				</nav>
+
+				<div class="newsletter">
+					<h3 class="pageTitle">Newsletter</h3>
+					<section class="content">
+						<p>Inscrivez-vous et profitez de nos offres !</p>
+					</section>
+					<% link_to "#newsletter" do %><%= image_tag "newsletter.png", :alt=>"newsletter" %><% end %>
+				</div>
+			</div>
+
+			<div class="recipes">
+				<h2 class="pageTitle in">Les entrées</h2>
+				<ul>
+					<li class="recipe">
+						<h3><%= link_to "Crêpes saumon fumé et pommes", "recipe-detail.html" %></h3>
+						<% link_to "recipe-detail.html" do %> <%= image_tag "recipes/crepesSaumon.jpg" , :alt=>"Image recette" %><% end %>
+						<ul class="scale">
+							<li class="size">8 pers.</li>
+							<li class="time">20 min.</li>
+						</ul>
+						<ul class="desc">
+							<li>Produit : boîte de 410 g</li>
+							<li>Difficulté : moyen</li>
+							<li>Tarif : bon marché</li>
+						</ul>
+					</li>
+					<li class="recipe">
+						<h3><%= link_to "Crème de yahourt aux courgettes", "recipe-detail.html" %></h3>
+						<% link_to "recipe-detail.html" do %> <%= image_tag "recipes/cremeYahourt.jpg" , :alt=>"Image recette" %><% end %>
+						<ul class="scale">
+							<li class="size">8 pers.</li>
+							<li class="time">20 min.</li>
+						</ul>
+						<ul class="desc">
+							<li>Produit : boîte de 410 g</li>
+							<li>Difficulté : moyen</li>
+							<li>Tarif : bon marché</li>
+						</ul>
+					</li>
+					<li class="recipe">
+						<h3><%= link_to "Mini cakes endives roquefort", "recipe-detail.html" %></h3>
+						<% link_to "recipe-detail.html" do %> <%= image_tag "recipes/cakesRoq.jpg" , :alt=>"Image recette" %><% end %>
+						<ul class="scale">
+							<li class="size">8 pers.</li>
+							<li class="time">20 min.</li>
+						</ul>
+						<ul class="desc">
+							<li>Produit : boîte de 410 g</li>
+							<li>Difficulté : moyen</li>
+							<li>Tarif : bon marché</li>
+						</ul>
+					</li>
+					<li class="recipe">
+						<h3><%= link_to "Darioles de Saint-Jacques", "recipe-detail.html" %></h3>
+						<% link_to "recipe-detail.html" do %> <%= image_tag "recipes/dariolesJacques.jpg" , :alt=>"Image recette" %><% end %>
+						<ul class="scale">
+							<li class="size">8 pers.</li>
+							<li class="time">20 min.</li>
+						</ul>
+						<ul class="desc">
+							<li>Produit : boîte de 410 g</li>
+							<li>Difficulté : moyen</li>
+							<li>Tarif : bon marché</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
