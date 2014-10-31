@@ -75,6 +75,7 @@
 					margin-bottom:5px;
 				}
 				a{
+					font-size:13px;
 					&:hover{
 						color:$greenText;
 					}
@@ -123,6 +124,7 @@
 				@include transition(all 200ms);
 				span{
 					@include inline-block();
+					@include transition(all 200ms);
 					vertical-align: middle;
 					&.icon{
 						position:relative;
@@ -133,6 +135,7 @@
 					}
 				}
 				&:hover{
+					padding-left:5px;
 					span.text{
 						color:$greenText;
 					}

@@ -165,7 +165,7 @@
 				text-decoration: none;
 				@include inline-block();
 				line-height: 1;
-				padding:0 20px;
+				padding:0 10px;
 			}
 		}
 		.packshot{
@@ -302,6 +302,9 @@
 	}
 	&.bg-red{
 		background-color:#cb545d;
+	}
+	&.bg-bright-red{
+		background-color:#e33b28;
 	}
 	&.bg-blue{
 		background-color:#5aaedc;

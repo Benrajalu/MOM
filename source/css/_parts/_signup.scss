@@ -30,8 +30,15 @@
 	}
 
 	p{
-		@include regular(12px, #212903);
+		@include regular(11px, #212903);
 		margin-bottom:5px;
+		&.right{
+			text-align:right;
+			width:534px;
+			margin:0px 0px;
+			position:relative;
+			top:-20px;
+		}
 	}
 
 	form{

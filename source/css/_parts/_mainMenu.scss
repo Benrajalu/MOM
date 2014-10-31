@@ -111,20 +111,6 @@
 							position:relative;
 							&:hover{
 								background:$green;
-								&:before, &:after{
-									position:absolute;
-									@include PE();
-									background:url('../img/flyoutHover.png');
-									height:3px;
-									width:88px;
-									opacity:0.24;
-								}
-								&:before{
-									top:-1.5px;
-								}
-								&:after{
-									bottom:-1.5px;
-								}
 							}
 						}
 					}

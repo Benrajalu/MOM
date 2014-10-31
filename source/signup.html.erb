@@ -11,42 +11,42 @@ description: Création de compte
 			<p>- Accès à la photothèques/PLV et téléchargement</p>
 
 			<form class="formBox" id="signup" action="#" type="POST" data-parsley-validate>
-				<div class="longLabels">
-					<div class="field">
+				<ul class="longLabels">
+					<li class="field">
 						<label for="pseudo">Nom d'utilisateur* :</label>
 						<input id="pseudo" name="pseudo" type="text" data-parsley-required="required" />
-					</div>
+					</li>
 
-					<div class="field">
+					<li class="field">
 						<label for="passW">Mot de passe* :</label>
 						<input id="passW" name="passW" type="password" data-parsley-required="required" />
-					</div>
+					</li>
 
-					<div class="field">
+					<li class="field">
 						<label for="mail">E-mail* :</label>
 						<input id="mail" name="mail" type="email" data-parsley-required="required" />
-					</div>
+					</li>
 					
-					<div class="field">
+					<li class="field">
 						<label>Civilité* :</label>
 						<div class="inline"> 
 							<input type="radio" name="civility" value="mr" id="mr" data-parsley-required="required"/><label for="mr">Mr</label>
 							<input type="radio" name="civility" value="mme" id="mme" /><label for="mme">Mme</label>
 							<input type="radio" name="civility" value="mlle" id="mlle" /><label for="mlle">Mlle</label>
 						</div>
-					</div>
+					</li>
 					
-					<div class="field">
+					<li class="field">
 						<label for="nom">Nom* :</label>
 						<input id="nom" name="nom" type="text" data-parsley-required="required" />
-					</div>
+					</li>
 
-					<div class="field">
+					<li class="field">
 						<label for="prenom">Prénom* :</label>
 						<input id="prenom" name="prenom" type="text" data-parsley-required="required" />
-					</div>
+					</li>
 
-					<div class="field">
+					<li class="field">
 						<label for="activity">Votre activité* :</label>
 						<select id="activity" name="activity" type="text" data-parsley-required="required">
 							<option value=""></option>
@@ -61,34 +61,35 @@ description: Création de compte
 							<option value="restauration traditionnelle">Restauration traditionnelle</option>
 							<option value="Autre">Autre</option>
 						</select>
-					</div>
+					</li>
 
-					<div class="field">
+					<li class="field">
 						<label for="fonction">Fonction occupée* :</label>
 						<input id="fonction" name="fonction" type="text" data-parsley-required="required" />
-					</div>
+					</li>
 
-					<div class="field">
+					<li class="field">
 						<label for="adresse">Adresse postale :</label>
 						<input id="adresse" name="adresse" type="text" />
-					</div>
+					</li>
 
-					<div class="field">
+					<li class="field">
 						<label for="code">Code postal :</label>
 						<input id="code" name="code" type="text" />
-					</div>
+					</li>
 
-					<div class="field">
+					<li class="field">
 						<label for="phone">Téléphone :</label>
 						<input id="phone" name="phone" type="text" />
-					</div>
-				</div>
+					</li>
+				</ul>
+				<p class="right">* Champs obligatoires</p>
 
 				<input type="checkbox" name="accept" value="yes" id="accept" />
 				<label for="accept">Je souhaite recevoir des idées recettes, des courriers électroniques d'informations et offres promotionnelles sur les produits MOM.</label>
 
 
-				<p class="error filled"></p>
+				<p class="error"></p>
 
 				<input type="submit" value="valider" />
 			</form>

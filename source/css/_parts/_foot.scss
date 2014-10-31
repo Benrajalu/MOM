@@ -23,5 +23,10 @@
 					padding:0 10px;
 				}
 			}
+			&:last-child{
+				a:after{
+					content:"";
+				}
+			}
 		}
 	}

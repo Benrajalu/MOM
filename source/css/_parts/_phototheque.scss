@@ -19,7 +19,26 @@
 					color:$greenText;
 				}
 				&.text{
-					margin-top:10px;
+					margin:10px auto 0px auto;
+					width:170px;
+					@include regular(14px, #fff);
+					@include transition(all 200ms);
+					background:$green;
+					@include border-radius(99px);
+					padding:0px 10px;
+					height:20px;
+					line-height: 20px;
+					text-decoration:none;
+					&.back{
+						position:absolute;
+						top:20px;
+						right:50px;
+						z-index:4;
+					}
+					&:hover{
+						background:$lightGreen;
+						color:$darkGreen;
+					}
 				}
 			}
 		}

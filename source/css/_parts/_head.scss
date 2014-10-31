@@ -26,16 +26,18 @@
 			}
 
 			> h2{
-				@include regular(22.7px, $greenText);
+				@include regular(18.7px, $greenText);
 				position:relative;
 				padding-left:10px;
 				margin-bottom:5px;
+				text-align:center;
 				&:before{
 					@include PE();
-					position:absolute;
+					@include inline-block();
+					position:relative;
 					content:">";
 					left:-6px;
-					top:-1px;
+					top:-3px;
 				}
 			}
 
@@ -76,6 +78,7 @@
 							padding:0px;
 							position:absolute;
 							right:-20px;
+							cursor:pointer;
 						}
 					}
 					.error{
