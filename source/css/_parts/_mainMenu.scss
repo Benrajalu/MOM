@@ -9,6 +9,7 @@
 			line-height:26px;
 			text-align:justify;
 			background:$green;
+			white-space: nowrap;
 			> li{
 				@include inline-block();
 				vertical-align: middle;
@@ -16,7 +17,7 @@
 				line-height:1;
 				position:relative;
 				top:-1px;
-				margin-left:-0.25em;
+				margin-left:-3px !important;
 				background:$green;
 				&:before{
 					@include PE();
@@ -28,6 +29,7 @@
 					height:100%;
 				}
 				&.home{
+					width:58px;
 					&:before{
 						display:none;
 					}
