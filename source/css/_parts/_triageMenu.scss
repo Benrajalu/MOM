@@ -19,8 +19,10 @@
 						@include transition(all 300ms);
 						@include regular(12px, #393939);
 						padding-right: 40px;
-						&:hover{
+						text-decoration:none;
+						&:hover, &.active{
 							color:$greenText;
+							text-decoration:underline;
 						}
 						img{
 							max-width: 100%;
