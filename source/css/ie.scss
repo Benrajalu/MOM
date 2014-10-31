@@ -1,9 +1,22 @@
 @import "compass/css3";
 
-#head #product {
-	position: absolute;
-	left: 702px;
-	width: 300px;
-	top: 435px;
-	z-index: 2;
-}
+// Fix recipes bug
+	.line{
+		.recipes{
+			>ul{
+				>li{
+					a{
+						@include transition(none);
+						img{
+							@include transform(none);
+						}
+						&:hover{
+							img{
+								@include opacity(1);
+							}
+						}
+					}
+				}
+			}
+		}
+	}

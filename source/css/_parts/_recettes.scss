@@ -90,16 +90,17 @@
 						display:block;
 						overflow: hidden;
 						@include transition(all 200ms);
-						&:before{
-							@include PE();
-							position:absolute;
-							top:5px;
+						>span{
+							position:absolute !important;
 							left:5px;
-							display:block;
-							z-index:999;
+							display:block !important;
+							z-index:99;
+							top:5px !important;
 						}
 						img{
 							display:block;
+							position:relative;
+							z-index:1;
 							@include transition(all 200ms);
 							@include transform(scale(1));
 						}
@@ -111,32 +112,32 @@
 							}
 						}
 					}
-					&.entrees a:before{
+					&.entrees a>span{
 						width:132px;
 						height:65px;
 						background:url("../img/les-entrees-text.png") center center no-repeat;
 					}
-					&.plats a:before{
+					&.plats a>span{
 						width:110px;
 						height:61px;
 						background:url("../img/les-plats-text.png") center center no-repeat;
 					}
-					&.desserts a:before{
+					&.desserts a>span{
 						width:139px;
 						height:67px;
 						background:url("../img/les-desserts-text.png") center center no-repeat;
 					}
-					&.gouters a:before{
+					&.gouters a>span{
 						width:126px;
 						height:56px;
 						background:url("../img/les-gouters-text.png") center center no-repeat;
 					}
-					&.montBlanc a:before{
+					&.montBlanc a>span{
 						width:76px;
 						height:72px;
 						background:url("../img/montBlancSmall.png") center center no-repeat;
 					}
-					&.gloria a:before{
+					&.gloria a>span{
 						width:115px;
 						height:68px;
 						background:url("../img/gloriaSmall.png") center center no-repeat;
